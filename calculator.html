@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pump Sizing & Energy Saving Calculator | DALIAN HONGSHI TECHNOLOGY</title>
+<meta name="description" content="Free pump calculator: hydraulic and shaft power, annual energy cost, savings versus a centrifugal pump, simple payback, and a slurry duty check with mixture density.">
+<link rel="canonical" href="https://jeeftang.github.io/tonglan-fluid-site/calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DALIAN HONGSHI TECHNOLOGY">
+<meta property="og:title" content="Pump Sizing & Energy Saving Calculator | DALIAN HONGSHI TECHNOLOGY">
+<meta property="og:description" content="Free pump calculator: hydraulic and shaft power, annual energy cost, savings versus a centrifugal pump, simple payback, and a slurry duty check with mixture density.">
+<meta property="og:url" content="https://jeeftang.github.io/tonglan-fluid-site/calculator.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0c1a26">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'><rect width='34' height='34' rx='9' fill='%230c1a26'/><path d='M17 6.5c3.6 2.4 6 6.2 6 10.2 0 3.3-2.7 6-6 6s-6-2.7-6-6c0-4 2.4-7.8 6-10.2Z' fill='%23e2570f'/></svg>">
+
+<style>
+.tabs{display:flex;gap:8px;margin-bottom:22px;flex-wrap:wrap}
+.tabs button{border:1px solid #ccd8df;background:#fff;padding:10px 16px;border-radius:9px;font:inherit;font-weight:700;font-size:14px;cursor:pointer;color:#16303f}
+.tabs button.active{background:#0c1a26;color:#fff;border-color:#0c1a26}
+.formula{background:#fff;border:1px solid #dde5ea;border-radius:12px;padding:18px 22px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:14px;color:#16303f;overflow-x:auto}
+</style>
+</head>
+<body><header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><svg width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+<rect width="34" height="34" rx="9" fill="#0c1a26"/>
+<path d="M17 6.5c3.6 2.4 6 6.2 6 10.2 0 3.3-2.7 6-6 6s-6-2.7-6-6c0-4 2.4-7.8 6-10.2Z" fill="#e2570f"/>
+<path d="M17 22.7v4.8M11 14.5h12" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".85"/>
+</svg><span>HONGSHI<small>Industrial Pumps</small></span></a>
+    <ul><li><a href="plunger-pumps.html">Plunger Pumps</a></li><li><a href="slurry-pumps.html">Slurry Pumps</a></li><li><a href="applications.html">Applications</a></li><li><a href="calculator.html" class="on">Calculator</a></li><li><a href="about.html">About</a></li></ul>
+    <a class="btn cta" href="contact.html">Request a Quote</a>
+  </div>
+</header>
+<nav class="crumbs" aria-label="Breadcrumb"><div class="wrap"><ol style="list-style:none;display:flex;gap:8px;padding:0;margin:0" itemscope itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="index.html"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="calculator.html"><span itemprop="name">Calculator</span></a><meta itemprop="position" content="2"></li></ol></div></nav>
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Engineering tools</p>
+    <h1>Pump sizing &amp; energy saving calculator</h1>
+    <p class="lead">Two calculations we run on every project: what a duty point costs in shaft power, and what changes when a centrifugal pump is replaced by a plunger pump. Everything runs in your browser — no data is sent anywhere.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="tabs">
+      <button data-tab="energy" class="active">Energy &amp; payback</button>
+      <button data-tab="slurry">Slurry duty check</button>
+    </div>
+
+    <div data-panel="energy">
+      <div class="calc">
+        <div class="calc-form">
+          <div class="field"><label for="e_q">Flow rate Q (m³/h)</label><input id="e_q" type="number" value="250" min="1" step="1"><div class="hint">Volume flow at duty point</div></div>
+          <div class="field"><label for="e_h">Total head H (m)</label><input id="e_h" type="number" value="800" min="1" step="10"><div class="hint">Discharge head minus suction head, including pipe losses</div></div>
+          <div class="field"><label for="e_rho">Fluid density (kg/m³)</label><input id="e_rho" type="number" value="1000" min="500" step="10"></div>
+          <div class="field"><label for="e_eff">New pump efficiency (%)</label><input id="e_eff" type="number" value="90" min="30" max="98" step="1"><div class="hint">90% is the published figure for the TL range</div></div>
+          <div class="field"><label for="e_eff_old">Existing pump efficiency (%)</label><input id="e_eff_old" type="number" value="55" min="10" max="95" step="1"><div class="hint">Use the measured or nameplate value; 45–65% is common for a worn multistage unit</div></div>
+          <div class="field"><label for="e_hours">Operating hours per year</label><input id="e_hours" type="number" value="8000" min="100" step="100"></div>
+          <div class="field"><label for="e_price">Electricity price (US$/kWh)</label><input id="e_price" type="number" value="0.08" min="0.01" step="0.01"></div>
+          <div class="field"><label for="e_capex">Installed cost of new pump (US$)</label><input id="e_capex" type="number" value="150000" min="0" step="1000"><div class="hint">Optional — used only for simple payback</div></div>
+        </div>
+        <div class="calc-out">
+          <h3>Results</h3>
+          <div class="kv"><span>Hydraulic power</span><b id="o_ph">—</b></div>
+          <div class="kv"><span>New pump shaft power</span><b id="o_pnew">—</b></div>
+          <div class="kv"><span>Existing pump shaft power</span><b id="o_pold">—</b></div>
+          <div class="kv"><span>New pump energy</span><b id="o_kwh">—</b></div>
+          <div class="kv"><span>New pump energy cost</span><b id="o_cost">—</b></div>
+          <div class="kv hl"><span>Annual saving</span><b id="o_save">—</b></div>
+          <div class="kv hl"><span>Simple payback</span><b id="o_payback">—</b></div>
+          <div class="kv"><span>CO₂ avoided</span><b id="o_co2">—</b></div>
+          <p class="note" id="e_hint"></p>
+        </div>
+      </div>
+      <div class="formula" style="margin-top:22px">
+        P<sub>hyd</sub> = ρ · g · Q · H / 3.6×10⁶  [kW, Q in m³/h] &nbsp;·&nbsp; P<sub>shaft</sub> = P<sub>hyd</sub> / η &nbsp;·&nbsp; CO₂ factor 0.581 kg/kWh
+      </div>
+    </div>
+
+    <div data-panel="slurry" style="display:none">
+      <div class="calc">
+        <div class="calc-form">
+          <div class="field"><label for="s_q">Slurry flow Q (m³/h)</label><input id="s_q" type="number" value="250" min="1" step="1"></div>
+          <div class="field"><label for="s_h">Head H (m)</label><input id="s_h" type="number" value="120" min="1" step="5"></div>
+          <div class="field"><label for="s_c">Solids concentration (% by weight)</label><input id="s_c" type="number" value="35" min="0" max="80" step="1"><div class="hint">Pulp density as a mass fraction</div></div>
+          <div class="field"><label for="s_sg">Solids specific gravity</label><input id="s_sg" type="number" value="2.7" min="1.1" max="8" step="0.1"><div class="hint">2.7 for typical rock / coal tailings</div></div>
+          <div class="field"><label for="s_eff">Pump efficiency (%)</label><input id="s_eff" type="number" value="83" min="30" max="98" step="1"></div>
+          <div class="field"><label for="s_hours">Operating hours per year</label><input id="s_hours" type="number" value="8000" min="100" step="100"></div>
+          <div class="field"><label for="s_price">Electricity price (US$/kWh)</label><input id="s_price" type="number" value="0.08" min="0.01" step="0.01"></div>
+        </div>
+        <div class="calc-out">
+          <h3>Results</h3>
+          <div class="kv"><span>Mixture density</span><b id="o_mix">—</b></div>
+          <div class="kv"><span>Mixture specific gravity</span><b id="o_sg_mix">—</b></div>
+          <div class="kv"><span>Hydraulic power</span><b id="o_sph">—</b></div>
+          <div class="kv hl"><span>Shaft power</span><b id="o_sshaft">—</b></div>
+          <div class="kv"><span>Annual energy</span><b id="o_skwh">—</b></div>
+          <div class="kv"><span>Annual energy cost</span><b id="o_scost">—</b></div>
+          <p class="note" id="s_rec"></p>
+        </div>
+      </div>
+      <div class="formula" style="margin-top:22px">
+        ρ<sub>mix</sub> = 1 / (c/ρ<sub>s</sub> + (1−c)/ρ<sub>w</sub>) &nbsp;·&nbsp; c = solids mass fraction &nbsp;·&nbsp; P<sub>shaft</sub> = ρ<sub>mix</sub>·g·Q·H / (3.6×10⁶ · η)
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap prose">
+    <h2>How to read the result</h2>
+    <p>These are screening numbers, not a selection. They assume clean-fluid power with the efficiency you enter, and they ignore NPSH, viscosity correction and motor margin. A real selection adds 10–15% motor margin and checks the suction condition.</p>
+    <h3>What usually surprises people</h3>
+    <p>The shaft power of a worn centrifugal pump is often 1.6–2× the new pump — not because the motor is oversized, but because efficiency has fallen away from the design point. Measured input power is the single most useful number you can give us.</p>
+    <h3>Payback assumptions</h3>
+    <p>Simple payback only. It ignores maintenance savings (typically 30–50% of the energy saving on abrasive duties), downtime and the residual value of the old unit — so the real payback is usually shorter than shown.</p>
+  </div>
+</section>
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="brand" href="index.html" style="color:#fff"><svg width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+<rect width="34" height="34" rx="9" fill="#0c1a26"/>
+<path d="M17 6.5c3.6 2.4 6 6.2 6 10.2 0 3.3-2.7 6-6 6s-6-2.7-6-6c0-4 2.4-7.8 6-10.2Z" fill="#e2570f"/>
+<path d="M17 22.7v4.8M11 14.5h12" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".85"/>
+</svg><span style="color:#fff">HONGSHI<small style="color:#8fa6b2">Industrial Pumps</small></span></a>
+        <p style="margin-top:16px;max-width:320px">大连宏实科技有限公司<br>High-pressure reciprocating pumps and slurry pumps for mining, power, oil &amp; gas and process industries.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="plunger-pumps.html">Multi-plunger pumps</a></li>
+          <li><a href="slurry-pumps.html">Slurry pumps</a></li>
+          <li><a href="calculator.html">Sizing calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Applications</h4>
+        <ul>
+          <li><a href="mine-dewatering.html">Mine dewatering</a></li>
+          <li><a href="filter-press-feed.html">Filter press feed</a></li>
+          <li><a href="tailings-transport.html">Tailings transport</a></li>
+          <li><a href="water-injection.html">Water injection</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:18041136555@189.cn">18041136555@189.cn</a></li>
+          <li><a href="tel:+8618041136555">+86 180 4113 6555</a></li>
+          <li>Microsoft Teams: <a href="mailto:18041136555@189.cn">18041136555@189.cn</a></li>
+          <li>Dalian, Liaoning, China</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2026 大连宏实科技有限公司. All rights reserved.</span>
+      <span>Engineered in Shanghai · Serviced worldwide</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/calc.js" defer></script>
+</body>
+</html>
