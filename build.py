@@ -196,7 +196,7 @@ def faq_ld(pairs):
 home_body = f"""
 <section class="hero">
   <div class="wrap">
-    <div class="badge"><i></i> Reciprocating pump technology · 7–320 m³/h · up to 70 MPa</div>
+    <div class="badge"><i></i> Reciprocating pump technology · 12–600 m³/h · up to 3,150 m head</div>
     <h1>High-pressure pumps that cut your energy bill — not your uptime.</h1>
     <p class="lead">Multi-plunger reciprocating pumps and slurry pumps built for continuous duty in mines, power plants, oilfields and processing plants. 90%+ efficiency, direct mechanical drive, and drop-in replacement for multistage centrifugal pumps.</p>
     <div class="hero-actions">
@@ -205,7 +205,7 @@ home_body = f"""
     </div>
     <div class="stats">
       <div class="stat"><b>90%+</b><span>Pump efficiency, stable in service</span></div>
-      <div class="stat"><b>7–320</b><span>m³/h flow range</span></div>
+      <div class="stat"><b>12–600</b><span>m³/h flow range</span></div>
       <div class="stat"><b>4–50</b><span>MPa discharge pressure</span></div>
       <div class="stat"><b>30,000 h</b><span>Overhaul interval</span></div>
     </div>
@@ -224,7 +224,7 @@ home_body = f"""
         <div>
           <p class="tag">UDZ series · 3 / 5 / 7 plungers</p>
           <h3>Multi-plunger high-pressure pumps</h3>
-          <p>7–320 m³/h at 16–70 MPa with efficiency above 90%. Used for boiler feed, oilfield water injection, high-pressure descaling and mine dewatering. Same suction and discharge orientation as the multistage centrifugal pump it replaces.</p>
+          <p>12–600 m³/h and 200–3,150 m of head (2.0–31.5 MPa), plus an injection series to 70 MPa, all with efficiency above 90%. Used for boiler feed, oilfield water injection, high-pressure descaling and mine dewatering. Same suction and discharge orientation as the multistage centrifugal pump it replaces — a 500 m³/h centrifugal pump is replaced by one UDZ 600 unit, not a parallel pair.</p>
           <ul class="checks">
             <li>No hydraulic station — mechanical crank drive</li>
             <li>Wear parts 5,000 h+, overhaul 30,000 h+</li>
@@ -327,7 +327,7 @@ home_body = f"""
 page(
     "index.html",
     "High-Pressure Plunger Pumps & Slurry Pumps | DALIAN HONGSHI TECHNOLOGY",
-    "Multi-plunger reciprocating pumps 7–320 m³/h up to 70 MPa and slurry pumps 100–400 m³/h with 83%+ efficiency. Drop-in replacement for multistage centrifugal pumps.",
+    "Multi-plunger reciprocating pumps 12–600 m³/h, heads to 3,150 m, injection series to 70 MPa; slurry pumps 100–400 m³/h at 83%+ efficiency. Drop-in replacement for multistage centrifugal pumps.",
     home_body,
     active="",
     jsonld=org_ld(),
@@ -339,7 +339,7 @@ plunger_body = f"""
 <section class="page-head">
   <div class="wrap">
     <p class="eyebrow">UDZ series · multi-plunger reciprocating</p>
-    <h1>Multi-plunger pumps, 7–320 m³/h up to 70 MPa</h1>
+    <h1>Multi-plunger pumps, 12–600 m³/h and up to 3,150 m of head</h1>
     <p class="lead">Three, five and seven-plunger machines with mechanical crank drive. Stable efficiency above 90%, wear parts from 5,000 hours, and a footprint that replaces a multistage centrifugal pump without re-piping the station.</p>
   </div>
 </section>
@@ -362,17 +362,25 @@ plunger_body = f"""
     <div>
       <div class="table-wrap">
         <table>
-          <thead><tr><th>Model</th><th>Plungers</th><th>Flow (m³/h)</th><th>Pressure (MPa)</th><th>Efficiency</th><th>Motor (kW)</th></tr></thead>
+          <thead><tr><th>Series</th><th>Flow (m³/h)</th><th>Head (m)</th><th>Pressure (MPa)</th><th>Typical duty</th></tr></thead>
           <tbody>
-            <tr><td><strong>UDZ 30/16</strong></td><td class="num">3</td><td class="num">7–30</td><td class="num">16–70</td><td class="num">≥88%</td><td class="num">160</td></tr>
-            <tr><td><strong>UDZ 50/16</strong></td><td class="num">5</td><td class="num">11.5–50</td><td class="num">16–70</td><td class="num">≥90%</td><td class="num">250</td></tr>
-            <tr><td><strong>UDZ 100/16</strong></td><td class="num">5</td><td class="num">23–102</td><td class="num">16–70</td><td class="num">≥90%</td><td class="num">500</td></tr>
-            <tr><td><strong>UDZ 160/16</strong></td><td class="num">7</td><td class="num">36.6–160</td><td class="num">16–70</td><td class="num">≥90%</td><td class="num">800</td></tr>
-            <tr><td><strong>UDZ 320/16</strong></td><td class="num">7</td><td class="num">72–320</td><td class="num">16–70</td><td class="num">≥90%</td><td class="num">1600</td></tr>
+                        <tr><td><strong>UDQ 12</strong></td><td class="num">12</td><td class="num">200–630</td><td class="num">2.0–6.3</td><td>Small boiler feed, high-mountain supply</td></tr>
+            <tr><td><strong>UDQ 20</strong></td><td class="num">20</td><td class="num">300–1,250</td><td class="num">3.0–12.5</td><td>Boiler feed, descaling</td></tr>
+            <tr><td><strong>UDQ 30</strong></td><td class="num">30</td><td class="num">300–1,250</td><td class="num">3.0–12.5</td><td>Boiler feed, process</td></tr>
+            <tr><td><strong>UDQ 46</strong></td><td class="num">46</td><td class="num">300–800</td><td class="num">3.0–8.0</td><td>Boiler feed, water supply</td></tr>
+            <tr><td><strong>UDQ 60</strong></td><td class="num">60</td><td class="num">300–3,150</td><td class="num">3.0–31.5</td><td>Highest head in the range</td></tr>
+            <tr><td><strong>UDQ 85</strong></td><td class="num">85</td><td class="num">300–2,000</td><td class="num">3.0–20.0</td><td>Boiler feed, mine dewatering</td></tr>
+            <tr><td><strong>UDQ 120</strong></td><td class="num">120</td><td class="num">300–1,600</td><td class="num">3.0–16.0</td><td>Boiler feed, mine dewatering</td></tr>
+            <tr><td><strong>UDQ 155</strong></td><td class="num">155</td><td class="num">300–1,600</td><td class="num">3.0–16.0</td><td>Mine dewatering, water supply</td></tr>
+            <tr><td><strong>UDQ 200</strong></td><td class="num">200</td><td class="num">300–1,000</td><td class="num">3.0–10.0</td><td>Mine dewatering</td></tr>
+            <tr><td><strong>UDZ 280</strong></td><td class="num">280</td><td class="num">300–800</td><td class="num">3.0–8.0</td><td>Mine dewatering, ash transfer</td></tr>
+            <tr><td><strong>UDZ 450</strong></td><td class="num">450</td><td class="num">300–1,000</td><td class="num">3.0–10.0</td><td>Large mine dewatering</td></tr>
+            <tr><td><strong>UDZ 600</strong></td><td class="num">600</td><td class="num">300–630</td><td class="num">3.0–6.3</td><td>Largest single unit — replaces 500 m³/h centrifugal</td></tr>
+            <tr><td><strong>UDQ 600</strong></td><td class="num">600</td><td class="num">700–1,000</td><td class="num">7.0–10.0</td><td>600 m³/h at high head, up to 2,240 kW</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="small" style="margin-top:12px">Ranges are indicative. Motor sizing, plunger diameter and stroke are fixed against the confirmed duty point; higher pressures and custom flows are engineered to order.</p>
+      <p class="small" style="margin-top:12px">Speeds 180–310 rpm, volumetric efficiency ≥97%, overall efficiency ≥90%. Head in metres ÷ 100 gives the equivalent pressure in MPa. Injection series UDZ 30/50/100/160/320 …/16 covers 7–320 m³/h at 16–70 MPa — ask for that datasheet.</p>
       <div class="card" style="margin-top:24px">
         <h3>Mechanical data</h3>
         <ul class="checks">
@@ -417,17 +425,17 @@ plunger_body = f"""
 
 page(
     "plunger-pumps.html",
-    "Multi-Plunger Reciprocating Pumps 7–320 m³/h, up to 70 MPa | DALIAN HONGSHI TECHNOLOGY",
-    "UDZ series three, five and seven-plunger reciprocating pumps: 7–320 m³/h, 16–70 MPa, 90%+ efficiency, 30,000 h overhaul. Drop-in replacement for multistage centrifugal pumps.",
+    "Multi-Plunger Reciprocating Pumps 12–600 m³/h, up to 3,150 m Head | DALIAN HONGSHI TECHNOLOGY",
+    "Three, five and seven-plunger reciprocating pumps: 12–600 m³/h, heads 200–3,150 m, injection series to 70 MPa, 90%+ efficiency. Drop-in replacement for multistage centrifugal pumps.",
     plunger_body,
     active="plunger-pumps.html",
     jsonld=product_ld(
         "TL Series Multi-Plunger Reciprocating Pump",
-        "Multi-plunger reciprocating pump, 7–320 m³/h, 16–70 MPa, efficiency above 90%, mechanical crank drive.",
+        "Multi-plunger reciprocating pump, 12–600 m³/h, heads 200–3,150 m, efficiency above 90%, mechanical crank drive.",
         "plunger-pumps.html",
         {"additionalProperty": [
-            {"@type": "PropertyValue", "name": "Flow rate", "value": "7–320 m³/h"},
-            {"@type": "PropertyValue", "name": "Discharge pressure", "value": "16–70 MPa"},
+            {"@type": "PropertyValue", "name": "Flow rate", "value": "12–600 m³/h"},
+            {"@type": "PropertyValue", "name": "Discharge pressure", "value": "2.0–31.5 MPa (clear water) / 16–70 MPa (injection)"},
             {"@type": "PropertyValue", "name": "Efficiency", "value": ">90%"},
         ]},
     ),
@@ -601,10 +609,10 @@ apps_body = f"""
       <table>
         <thead><tr><th>Application</th><th>Flow (m³/h)</th><th>Head / pressure</th><th>Solids</th><th>Recommended</th></tr></thead>
         <tbody>
-          <tr><td>Mine dewatering</td><td class="num">100–320</td><td class="num">up to 70 MPa</td><td>abrasive water</td><td>UDZ 160/16 · UDZ 320/16</td></tr>
+          <tr><td>Mine dewatering</td><td class="num">12–600</td><td class="num">200–3,150 m</td><td>abrasive water</td><td>UDQ 60–UDZ 600</td></tr>
           <tr><td>Filter press feed</td><td class="num">100–400</td><td class="num">≤150 m</td><td>30%+</td><td>V5</td></tr>
           <tr><td>Tailings transport</td><td class="num">100–400</td><td class="num">≤150 m</td><td>30–60%</td><td>V5</td></tr>
-          <tr><td>Water injection</td><td class="num">72–320</td><td class="num">16–70 MPa</td><td>clean water</td><td>UDZ 320/16</td></tr>
+          <tr><td>Water injection</td><td class="num">7–320</td><td class="num">16–70 MPa</td><td>clean water</td><td>UDZ …/16 family</td></tr>
         </tbody>
       </table>
     </div>
@@ -648,7 +656,7 @@ mine_body = f"""
       </ul>
       <div class="callout"><p><strong>Reference:</strong> three pump houses at −50, −250 and −500 m on a Chinese coal mine, replacing 24 multistage centrifugal units with six multi-plunger machines. Measured energy saving 22–37% across the three stations.</p></div>
       <h2>Selection range</h2>
-      <p>Typical dewatering duties fall in the UDZ 160/16 and UDZ 320/16 range: 100–320 m³/h at 16 MPa and above. Where the lift is lower but the flow higher, the V5 slurry pump handles dirty water with solids.</p>
+      <p>Typical dewatering duties fall between UDQ 60 and UDZ 600: 60–600 m³/h at 300–3,150 m of head. Where the lift is lower but the flow higher, the V5 slurry pump handles dirty water with solids.</p>
     </div>
     <div>
       <div class="table-wrap">
@@ -834,7 +842,7 @@ wi_body = f"""
       <p>Multistage centrifugal pumps also have to go back to the factory for overhaul, which means either a spare train or an outage. Plunger pumps are maintained in place.</p>
       <h2>Configuration</h2>
       <ul>
-        <li><strong>UDZ 320/16 seven-plunger</strong>, 72–320 m³/h at 16–70 MPa</li>
+        <li><strong>UDZ 600 seven-plunger</strong>, up to 600 m³/h at 300–630 m head — replaces a 500 m³/h multistage centrifugal pump with one unit</li>
         <li><strong>VFD or fixed speed</strong>, depending on reservoir pressure strategy</li>
         <li><strong>Smart control</strong>: automatic regulation, condition monitoring, fault diagnosis, remote telemetry</li>
         <li><strong>Skid packaging</strong> with suction stabiliser, relief valve and instrumentation</li>
@@ -1006,7 +1014,7 @@ about_body = f"""
       <div class="card">
         <h3>At a glance</h3>
         <div class="kv" style="color:var(--ink);border-color:var(--line)"><span class="muted">Founded</span><b>2018, Shanghai</b></div>
-        <div class="kv" style="color:var(--ink);border-color:var(--line)"><span class="muted">Product range</span><b>7–320 m³/h · 16–70 MPa</b></div>
+        <div class="kv" style="color:var(--ink);border-color:var(--line)"><span class="muted">Product range</span><b>12–600 m³/h · 200–3,150 m head · to 70 MPa</b></div>
         <div class="kv" style="color:var(--ink);border-color:var(--line)"><span class="muted">Pump efficiency</span><b>&gt;90%</b></div>
         <div class="kv" style="color:var(--ink);border-color:var(--line)"><span class="muted">Overhaul interval</span><b>30,000 h+</b></div>
         <div class="kv" style="color:var(--ink);border:0"><span class="muted">Markets</span><b>Mining · power · oil &amp; gas</b></div>
